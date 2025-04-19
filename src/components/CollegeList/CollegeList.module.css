@@ -486,6 +486,7 @@
   
   .collegeName {
     flex-direction: column;
+    align-items: flex-start;
     gap: 15px;
     padding: 20px;
   }
@@ -505,7 +506,6 @@
   }
   
   .filterContainer {
-    justify-content: flex-start;
     overflow-x: auto;
     padding-bottom: 10px;
   }
