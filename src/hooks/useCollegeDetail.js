@@ -1,8 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || `http://localhost:1337`;
+
 const fetchCollegeDetail = async (id) => {
-  const { data } = await axios.get(`http://localhost:1337/api/colleges?filters[id][$eq]=${id}&populate=*`);
+  const { data } = await axios.get(`${BACKEND_URL}/api/colleges?filters[id][$eq]=${id}&populate=*`);
   return data.data[0] || null;
 };
 

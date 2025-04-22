@@ -36,14 +36,6 @@ const CollegeList = () => {
     return "other";
   }
 
-  // Имитация загрузки данных (только при первой загрузке)
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, []);
-
   // Сброс поиска
   const handleClearSearch = () => {
     setSearchTerm("");
