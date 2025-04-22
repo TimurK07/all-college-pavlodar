@@ -4,7 +4,7 @@ import axios from 'axios';
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 const fetchColleges = async () => {
-  const { data } = await axios.get(`https://function-bun-production-2fb5.up.railway.app/api/colleges?populate=*`);
+  const { data } = await axios.get(`${BACKEND_URL}/api/colleges?populate=*`);
   return data;
 };
 
